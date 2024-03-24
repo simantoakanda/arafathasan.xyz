@@ -1,0 +1,669 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a white background for the entire page */
+  body {
+    background-color: #ffffff;
+  }
+  
+  /* Header styles */
+  .navigation {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-top {
+    padding: 10px 0;
+  }
+  
+  .header-top-socials a {
+    color: #333;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .header-top-socials a:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .header-top-info a {
+    color: #333;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .header-top-info a:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .navbar {
+    padding: 20px 0;
+  }
+  
+  .navbar-brand img {
+    height: auto;
+    max-height: 60px;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .nav-item.active .nav-link {
+    color: #ff6b6b; /* Active link color */
+    text-decoration: underline; /* Add underline to active link */
+  }
+  
+  /* Responsive styles using Bootstrap classes */
+  @media (max-width: 991px) {
+    .navbar-toggler-icon {
+      background-color: #fff9f9;
+    }
+    
+    .navbar-collapse {
+      background-color: #ffffff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
+    
+    .navbar-collapse.show {
+      display: block;
+    }
+    
+    .navbar-nav {
+      flex-direction: column;
+      padding: 20px;
+    }
+    
+    .nav-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Hover effects and transitions */
+  .nav-link {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6b6b;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .nav-link:hover:before {
+    transform: scaleX(1); /* Expand the underline on hover */
+  }
+  
+  /* Mobile navigation adjustments using Bootstrap classes */
+  @media (max-width: 767px) {
+    .navbar {
+      padding: 10px 0;
+    }
+  
+    .navbar-brand img {
+      max-height: 40px;
+    }
+    
+    .navbar-collapse {
+      padding-top: 60px;
+      display: none;
+    }
+  }
+  
+  /* Tablet landscape navigation adjustments using Bootstrap classes */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+      padding: 15px 0;
+    }
+  
+    .navbar-brand img {
+      max-height: 50px;
+    }
+    
+    .navbar-collapse {
+      padding-top: 40px;
+    }
+  }
+  
+  /* Tablet portrait navigation adjustments using Bootstrap classes */
+  @media (max-width: 767px) {
+    .navbar {
+      padding: 10px 0;
+    }
+  
+    .navbar-brand img {
+      max-height: 40px;
+    }
+  
+    .navbar-nav {
+      padding: 15px;
+    }
+  
+    .nav-item.active .nav-link {
+      text-decoration: none;
+    }
+  }
+  
+  /* Custom CSS for responsive image */
+  @media (max-width: 991px) {
+    .carousel-inner .d-lg-flex.animated.zoomIn {
+      display: block !important;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+    .carousel-inner .d-lg-flex.animated.zoomIn img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+ /* Carousel CSS */
+#header-carousel {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-caption h6 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.carousel-caption h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.carousel-caption a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Responsive Styles for Carousel */
+@media (max-width: 768px) {
+  .carousel-caption h6 {
+    font-size: 14px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 30px;
+  }
+
+  .carousel-caption a {
+    font-size: 16px;
+  }
+
+  .carousel-caption {
+    top: 40%;
+  }
+}
+
+/* Animations */
+.animated {
+  animation-duration: 1s;
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px;
+}
+
+/* Additional Styling */
+.container-fluid {
+  padding: 0;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.py-3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-5 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+
+
+
+
+
+/* Main Banner Styles */
+.main-banner {
+  background-image: url('img/pngtree-technology-web-banner-style-background-design-picture-image_1246232.jpg'); /* Replace 'assets/images/banner-bg.jpg' with your actual image path */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0; /* Adjust padding as needed */
+  color: #fff;
+}
+
+.header-text h6 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.header-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.main-button-gradient .scroll-to-section a {
+  background: linear-gradient(45deg, #4CAF50, #FFC107);
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.main-button-gradient .scroll-to-section a:hover {
+  transform: translateY(-3px);
+}
+
+.right-image img {
+  max-width: 100%;
+  height: auto;
+}
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .main-banner {
+      padding: 80px 0; /* Adjust padding for smaller screens */
+  }
+
+  .header-text h6 {
+      font-size: 16px;
+  }
+
+  .header-text h2 {
+      font-size: 30px;
+  }
+
+  .main-button-gradient .scroll-to-section a {
+      padding: 12px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-text h6 {
+      font-size: 14px;
+  }
+
+  .header-text h2 {
+      font-size: 26px;
+  }
+
+  .main-button-gradient .scroll-to-section a {
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-text h6 {
+      font-size: 12px;
+  }
+
+  .header-text h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+  }
+
+  .main-button-gradient .scroll-to-section a {
+      padding: 8px 15px;
+      font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Section Styles */
+#contact-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Contact Information Styles */
+.dbox {
+  margin-bottom: 20px;
+}
+
+.dbox .icon {
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dbox .text {
+  padding-left: 20px;
+}
+
+/* Map Container Styles */
+.map-container {
+  margin-top: 30px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive iframe */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    padding: 8px;
+  }
+
+  .dbox {
+    flex-direction: column;
+  }
+
+  .dbox .text {
+    padding-left: 0;
+    padding-top: 10px;
+  }
+
+  .map-container {
+    margin-top: 20px;
+  }
+}
+
+/* Additional Styles */
+.subheading {
+  display: block;
+  color: #007bff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.heading-section h2 {
+  font-size: 28px;
+}
+
+/* Styling Links */
+.text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.text a:hover {
+  text-decoration: underline;
+}
+
+/* Centered Text in Form Elements */
+.form-group {
+  text-align: center;
+}
+
+/* Form Input Placeholder Styles */
+::placeholder {
+  color: #ccc;
+}
+
+/* Form Input Focus Styles */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.3);
+}
+/* 3D Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) perspective(400px) rotateX(-30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) perspective(400px) rotateX(0);
+  }
+}
+
+/* Apply 3D animation to contact section */
+#contact-section .ftco-animate {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 991.98px) {
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    padding: 8px;
+  }
+
+  .map-container {
+    margin-top: 20px;
+  }
+}
+
+/* Additional Styles */
+@media (max-width: 575.98px) {
+  .subheading {
+    font-size: 20px;
+  }
+
+  .heading-section h2 {
+    font-size: 24px;
+  }
+
+  .dbox .icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .dbox .text {
+    padding-left: 15px;
+  }
+
+  .contact-form input[type="submit"] {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .contact-form textarea {
+    padding: 8px;
+  }
+
+  .map-container {
+    margin-top: 10px;
+  }
+}

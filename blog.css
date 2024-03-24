@@ -1,0 +1,1473 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a white background for the entire page */
+  body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  .navigation {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-top {
+    padding: 10px 0;
+  }
+  
+  .header-top-socials a {
+    color: #333;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .header-top-socials a:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .header-top-info a {
+    color: #333;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .header-top-info a:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .navbar {
+    padding: 20px 0;
+  }
+  
+  .navbar-brand img {
+    height: auto;
+    max-height: 60px;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .nav-item.active .nav-link {
+    color: #ff6b6b; /* Active link color */
+    text-decoration: underline; /* Add underline to active link */
+  }
+  
+  /* Responsive styles using Bootstrap classes */
+  @media (max-width: 991px) {
+    .navbar-toggler-icon {
+      background-color: #fff9f9;
+    }
+    
+    .navbar-collapse {
+      background-color: #ffffff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
+    
+    .navbar-collapse.show {
+      display: block;
+    }
+    
+    .navbar-nav {
+      flex-direction: column;
+      padding: 20px;
+    }
+    
+    .nav-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Hover effects and transitions */
+  .nav-link {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6b6b;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .nav-link:hover:before {
+    transform: scaleX(1); /* Expand the underline on hover */
+  }
+  
+  /* Mobile navigation adjustments using Bootstrap classes */
+  @media (max-width: 767px) {
+    .navbar {
+      padding: 10px 0;
+    }
+  
+    .navbar-brand img {
+      max-height: 40px;
+    }
+    
+    .navbar-collapse {
+      padding-top: 60px;
+      display: none;
+    }
+  }
+  
+  /* Tablet landscape navigation adjustments using Bootstrap classes */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+      padding: 15px 0;
+    }
+  
+    .navbar-brand img {
+      max-height: 50px;
+    }
+    
+    .navbar-collapse {
+      padding-top: 40px;
+    }
+  }
+  
+  /* Tablet portrait navigation adjustments using Bootstrap classes */
+  @media (max-width: 767px) {
+    .navbar {
+      padding: 10px 0;
+    }
+  
+    .navbar-brand img {
+      max-height: 40px;
+    }
+  
+    .navbar-nav {
+      padding: 15px;
+    }
+  
+    .nav-item.active .nav-link {
+      text-decoration: none;
+    }
+  }
+  
+  /* Custom CSS for responsive image */
+  @media (max-width: 991px) {
+    .carousel-inner .d-lg-flex.animated.zoomIn {
+      display: block !important;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+    .carousel-inner .d-lg-flex.animated.zoomIn img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Carousel CSS */
+  #header-carousel {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .carousel-caption h6 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .carousel-caption a {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Responsive Styles for Carousel */
+  @media (max-width: 768px) {
+    .carousel-caption h6 {
+      font-size: 14px;
+    }
+    
+    .carousel-caption h1 {
+      font-size: 30px;
+    }
+    
+    .carousel-caption a {
+      font-size: 16px;
+    }
+    
+    .carousel-caption {
+      top: 40%;
+    }
+  }
+  
+  /* Animations */
+  .animated {
+    animation-duration: 1s;
+  }
+  
+  .slideInDown {
+    animation-name: slideInDown;
+  }
+  
+  .zoomIn {
+    animation-name: zoomIn;
+  }
+  
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Carousel Controls */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+  }
+  
+  /* Additional Styling */
+  .container-fluid {
+    padding: 0;
+  }
+  
+  .mb-5 {
+    margin-bottom: 3rem;
+  }
+  
+  .py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .px-5 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Add more CSS styles as needed */
+  
+  /* Example: Center the carousel caption on larger screens */
+  @media (min-width: 992px) {
+    .carousel-caption {
+      top: 50%;
+    }
+  }
+  
+  
+  /* Carousel CSS */
+  #header-carousel {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .carousel-caption h6 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .carousel-caption a {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .carousel-caption h6 {
+      font-size: 14px;
+    }
+    
+    .carousel-caption h1 {
+      font-size: 30px;
+    }
+    
+    .carousel-caption a {
+      font-size: 16px;
+    }
+    
+    .carousel-caption {
+      top: 40%;
+    }
+  }
+  
+  /* Animations */
+  .animated {
+    animation-duration: 1s;
+  }
+  
+  .slideInDown {
+    animation-name: slideInDown;
+  }
+  
+  .zoomIn {
+    animation-name: zoomIn;
+  }
+  
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Carousel Controls */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+  }
+  
+  /* Additional Styling */
+  .container-fluid {
+    padding: 0;
+  }
+  
+  .mb-5 {
+    margin-bottom: 3rem;
+  }
+  
+  .py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .px-5 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Add more CSS styles as needed */
+  
+  /* Example: Center the carousel caption on larger screens */
+  @media (min-width: 992px) {
+    .carousel-caption {
+      top: 50%;
+    }
+  }
+  
+  
+  /* Base styles for the service section */
+  .pt-5 {
+    padding-top: 5rem;
+  }
+  .pb-5 {
+    padding-bottom: 5rem;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .section-head {
+    text-align: center;
+  }
+  .section-head h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    transform: skew(-10deg);
+    display: inline-block;
+    padding: 5px 20px;
+    background: linear-gradient(90deg, #FF5733, #007BFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .section-head p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Service items */
+  .item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  .item h6 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 15px;
+    text-align: justify;
+    transition: color 0.3s ease;
+  }
+  .item p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Icon styles */
+  .icon {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  }
+  .item:hover .icon {
+    background-color: #00A8FF;
+    transform: rotate(360deg);
+    color: #fff;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .item {
+      flex-basis: calc(50% - 30px);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .item {
+      flex-basis: 100%;
+    }
+  }
+  
+  /* Service section underline animation */
+  .item::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #007BFF;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+  .item:hover::before {
+    width: 100%;
+  }
+  
+  /* Two-color heading */
+  .item h6::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #FF5733;
+    margin-right: 5px;
+  }
+  .item h6::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #007BFF;
+    margin-left: 5px;
+  }
+  
+  
+  
+  
+  
+  
+  /* Font styles */
+  .skills-container h1 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .skills-container p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  /* Styles for the progress bars */
+  .bar {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .info span {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .progress-line {
+    width: 100%;
+    height: 15px;
+    background-color: #eee;
+    position: relative;
+  }
+  
+  .progress-line span {
+    height: 100%;
+    background-color: #007BFF;
+    display: block;
+  }
+  
+  /* Add dynamic progress bar animation */
+  .progress-line span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff5733 0%, #33ff57 25%, #5733ff 50%, #ff33aa 75%, #33aaff 100%);
+    animation: fillProgress 2s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .skills-container h1 {
+      font-size: 2rem;
+    }
+  
+    .skills-container p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Animation for progress bars */
+  @keyframes fillProgress {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: var(--progress); /* Use a CSS variable for dynamic progress */
+    }
+  }
+  
+  /* Button Styles */
+  .btn {
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Animation for the entire skills container */
+  .skills-container {
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.1s;
+  }
+  
+  /* Example of using CSS variables for dynamic progress */
+  .progress-line.html span::before {
+    --progress: 90%; /* Set the progress percentage here */
+  }
+  
+  .progress-line.css span::before {
+    --progress: 80%;
+  }
+  
+  .progress-line.jquery span::before {
+    --progress: 70%;
+  }
+  
+  .progress-line.python span::before {
+    --progress: 60%;
+  }
+  
+  .progress-line.mysql span::before {
+    --progress: 75%;
+  }
+  
+  
+  /* Blog section styling */
+  #blog-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: #fff;
+  }
+  
+  /* Blog entry styling */
+  .blog-entry {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blog-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Image styling */
+  .block-20 {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-top: 75%; /* Maintain 4:3 aspect ratio for the image */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Blog entry content */
+  .text {
+    padding: 20px;
+  }
+  
+  /* Date and author meta styling */
+  .meta {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  
+  /* Read more button styling */
+  .btn-primary {
+    background-color: #ee0979;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff6a00;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .blog-entry {
+      margin-bottom: 30px;
+    }
+  }
+  /* Additional Responsive Styles */
+  @media (max-width: 992px) {
+    .col-md-4 {
+      flex-basis: calc(50% - 20px); /* 2 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .col-md-4 {
+      flex-basis: 100%; /* 1 column on small screens */
+    }
+    .text {
+      text-align: center; /* Center-align text on small screens */
+    }
+  }
+  
+  /* Adjust heading size for smaller screens */
+  @media (max-width: 768px) {
+    .heading-section h2 {
+      font-size: 24px;
+    }
+  }
+  
+  /* Add a hover effect to the "Read More" button */
+  .btn-primary:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Style the subheading */
+  .subheading {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    opacity: 0.7;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  
+  /* Center-align the heading */
+  .heading-section.text-center h2 {
+    text-align: center;
+  }
+  
+  /* Responsive padding for heading section */
+  .heading-section {
+    padding-bottom: 30px;
+  }
+  
+  /* Center-align the meta information */
+  .meta {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  /* Add some spacing between meta elements */
+  .meta a {
+    margin-right: 10px;
+  }
+  
+  /* Center-align the "Read More" button */
+  .btn-primary.btn-sm {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Additional 3D animation for the subheading */
+  .subheading {
+    animation: colorChange 5s infinite alternate; /* Alternate between two colors */
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: #ff6a00; /* Starting color */
+    }
+    100% {
+      color: #ee0979; /* Ending color */
+    }
+  }
+  
+  
+  /* Apply a background color with a 3D animation */
+  .section.courses {
+    background-color: #24252A;
+    padding: 80px 0;
+    animation: gradientAnimation 10s linear infinite alternate;
+    background-size: 200% 200%;
+    background-image: linear-gradient(45deg, #FF6B6B, #FF8E8E, #FF6B6B, #FF8E8E);
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+  
+  /* Style the section title */
+  .section-title {
+    margin-bottom: 30px;
+    color: #FFFFFF;
+  }
+  
+  .section-title .h6 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .section-title .content-title {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  /* Style the course cards */
+  .card.course-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .card.course-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .course-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  
+  .course-description {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #555555;
+  }
+  
+  /* Style the "Learn More" button */
+  .btn.btn-small {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #FF6B6B;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn.btn-small:hover {
+    background-color: #FF8E8E;
+  }
+  
+  /* Make the images responsive and rounded */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Responsiveness for different screen sizes */
+  @media (max-width: 767px) {
+    .col-lg-4 {
+      margin-bottom: 30px;
+    }
+  }
+  
+  
+  
+  /* CSS for the counter section */
+  #section-counter {
+    background-color: #f8f9fa; /* Background color for the counter section */
+    padding: 80px 0; /* Adjust the padding as needed */
+  }
+  
+  .counter-wrap {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .block-18 {
+    background-color: #fff; /* Background color for the counter blocks */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for the 3D effect */
+    transition: transform 0.3s ease; /* Add a smooth transition for the 3D effect */
+  }
+  
+  .block-18:hover {
+    transform: translate(0, -5px); /* Apply a lift-up effect on hover */
+  }
+  
+  .icon {
+    width: 60px;
+    height: 60px;
+    background-color: #007bff; /* Background color for the icon circle */
+    border-radius: 50%; /* Make the icon circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+  }
+  
+  .icon span {
+    font-size: 24px;
+    color: #fff; /* Icon color */
+  }
+  
+  .number {
+    font-size: 32px;
+    color: #333; /* Number color */
+  }
+  
+  span {
+    font-size: 18px;
+    color: #777; /* Text color */
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .counter-wrap {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  
+  
+  
+  /* Team Section CSS */
+  /* Modify as needed to fit your design */
+  
+  .testimony-section {
+    position: relative;
+    background-color: #333; /* Change the background color */
+    color: #fff; /* Change the text color */
+    padding: 80px 0;
+  }
+  
+  .carousel-testimony {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-testimony .item {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .carousel-testimony .item.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .testimony-wrap {
+    border-radius: 10px;
+    background-color: #555; /* Change the testimonial background color */
+    padding: 30px;
+  }
+  
+  .testimony-wrap .text {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .user-img {
+    width: 100px; /* Adjust image size */
+    height: 100px; /* Adjust image size */
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 15px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .carousel-testimony .item {
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  /* Slideshow Animation */
+  .carousel-testimony .item:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .carousel-testimony .item:nth-child(2) {
+    animation-delay: 1s;
+  }
+  .carousel-testimony .item:nth-child(3) {
+    animation-delay: 2s;
+  }
+  /* Add more nth-child for additional items */
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .carousel-testimony .item {
+      padding: 10px;
+    }
+    .user-img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  
+  
+  /* Projects Section */
+  .projects {
+    padding: 80px 0;
+  }
+  
+  .projects .section-header {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .projects .section-header h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+  }
+  
+  .projects .section-header h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #1dc8cd;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .projects .section-header p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 0;
+  }
+  
+  .projects .portfolio-flters {
+    padding: 0;
+    margin: 30px 0 40px 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .projects .portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: #777;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .projects .portfolio-flters li:hover,
+  .projects .portfolio-flters li.filter-active {
+    color: #1dc8cd;
+  }
+  
+  .projects .portfolio-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .projects .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .projects .portfolio-item:hover .portfolio-info {
+    bottom: 0;
+  }
+  
+  .projects .portfolio-item .portfolio-content {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .projects .portfolio-item .img-fluid {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .projects .portfolio-item .portfolio-info {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+    background: rgba(29, 200, 205, 0.9);
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .projects .portfolio-item .portfolio-info h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    padding: 0;
+  }
+  
+  .projects .portfolio-item .portfolio-info p {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 0;
+  }
+  
+  .projects .portfolio-item .portfolio-info a {
+    color: #fff;
+    font-size: 24px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .projects .portfolio-item .portfolio-info a:hover {
+    color: #1dc8cd;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 767px) {
+    .projects .portfolio-flters li {
+      font-size: 14px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Footer Section */
+  /* General Styling */
+  .footer {
+    color: #fff;
+  }
+  
+  .footer a {
+    color: #fff;
+  }
+  
+  .footer a:hover {
+    text-decoration: none;
+  }
+  
+  .footer h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+  
+  .footer-item {
+    margin-bottom: 2rem;
+  }
+  
+  /* Newsletter Input and Button */
+  .form-control {
+    border-radius: 25px !important;
+  }
+  
+  .btn-primary {
+    border-radius: 25px !important;
+  }
+  
+  /* Social Icons */
+  .btn-md-square {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+  }
+  
+  /* Additional Footer Links */
+  .btn-link {
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Address and Contact Info */
+  .footer-item p {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Payment Icons */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Copyright Section */
+  .copyright {
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  /* Back to Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    z-index: 999;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .footer {
+      text-align: center;
+    }
+    
+    .footer-item {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .footer h1 {
+      font-size: 1.8rem;
+    }
+    
+    .btn-md-square {
+      margin-right: 0.8rem;
+    }
+  }
+  /* Subscribe Now Button */
+  .position-relative {
+    position: relative;
+  }
+  
+  @media (max-width: 575.98px) {
+    .position-relative {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    
+    .btn-primary {
+      width: 100%;
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+  }
+  /* Bootstrap 5 Overrides */
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* Text color */
+  }
+  
+  .footer a {
+    color: #ffffff; /* Link color */
+  }
+  
+  .footer-item {
+    margin-bottom: 30px;
+  }
+  
+  /* Subscribe Input and Button */
+  .footer input.form-control {
+    border-radius: 25px;
+  }
+  
+  .footer button[type="submit"] {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Social Media Buttons */
+  .btn-md-square {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    border-radius: 50%;
+  }
+  
+  /* Copyright Section */
+  .copyright {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* Text color */
+  }
+  
+  /* Back to Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    z-index: 99;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .footer-item {
+      text-align: center;
+    }
+  
+    .footer input.form-control,
+    .footer button[type="submit"] {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .footer-item {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .btn-md-square {
+      width: 35px;
+      height: 35px;
+      font-size: 16px;
+      line-height: 35px;
+    }
+  }
+  

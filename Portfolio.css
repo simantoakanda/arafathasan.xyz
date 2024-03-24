@@ -1,0 +1,579 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a white background for the entire page */
+  body {
+    background-color: #ffffff;
+  }
+  
+  /* Header styles */
+  .navigation {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-top {
+    padding: 10px 0;
+  }
+  
+  .header-top-socials a {
+    color: #333;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .header-top-socials a:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .header-top-info a {
+    color: #333;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .header-top-info a:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .navbar {
+    padding: 20px 0;
+  }
+  
+  .navbar-brand img {
+    height: auto;
+    max-height: 60px;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .nav-item.active .nav-link {
+    color: #ff6b6b; /* Active link color */
+    text-decoration: underline; /* Add underline to active link */
+  }
+  
+  /* Responsive styles using Bootstrap classes */
+  @media (max-width: 991px) {
+    .navbar-toggler-icon {
+      background-color: #fff9f9;
+    }
+    
+    .navbar-collapse {
+      background-color: #ffffff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
+    
+    .navbar-collapse.show {
+      display: block;
+    }
+    
+    .navbar-nav {
+      flex-direction: column;
+      padding: 20px;
+    }
+    
+    .nav-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Hover effects and transitions */
+  .nav-link {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6b6b;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #ff6b6b; /* Change color on hover */
+  }
+  
+  .nav-link:hover:before {
+    transform: scaleX(1); /* Expand the underline on hover */
+  }
+  
+  /* Mobile navigation adjustments using Bootstrap classes */
+  @media (max-width: 767px) {
+    .navbar {
+      padding: 10px 0;
+    }
+  
+    .navbar-brand img {
+      max-height: 40px;
+    }
+    
+    .navbar-collapse {
+      padding-top: 60px;
+      display: none;
+    }
+  }
+  
+  /* Tablet landscape navigation adjustments using Bootstrap classes */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+      padding: 15px 0;
+    }
+  
+    .navbar-brand img {
+      max-height: 50px;
+    }
+    
+    .navbar-collapse {
+      padding-top: 40px;
+    }
+  }
+  
+  /* Tablet portrait navigation adjustments using Bootstrap classes */
+  @media (max-width: 767px) {
+    .navbar {
+      padding: 10px 0;
+    }
+  
+    .navbar-brand img {
+      max-height: 40px;
+    }
+  
+    .navbar-nav {
+      padding: 15px;
+    }
+  
+    .nav-item.active .nav-link {
+      text-decoration: none;
+    }
+  }
+  
+  /* Custom CSS for responsive image */
+  @media (max-width: 991px) {
+    .carousel-inner .d-lg-flex.animated.zoomIn {
+      display: block !important;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+    .carousel-inner .d-lg-flex.animated.zoomIn img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Carousel CSS */
+  #header-carousel {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .carousel-caption h6 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .carousel-caption a {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Responsive Styles for Carousel */
+  @media (max-width: 768px) {
+    .carousel-caption h6 {
+      font-size: 14px;
+    }
+    
+    .carousel-caption h1 {
+      font-size: 30px;
+    }
+    
+    .carousel-caption a {
+      font-size: 16px;
+    }
+    
+    .carousel-caption {
+      top: 40%;
+    }
+  }
+  
+  /* Animations */
+  .animated {
+    animation-duration: 1s;
+  }
+  
+  .slideInDown {
+    animation-name: slideInDown;
+  }
+  
+  .zoomIn {
+    animation-name: zoomIn;
+  }
+  
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Carousel Controls */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+  }
+  
+  /* Additional Styling */
+  .container-fluid {
+    padding: 0;
+  }
+  
+  .mb-5 {
+    margin-bottom: 3rem;
+  }
+  
+  .py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .px-5 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Add more CSS styles as needed */
+  
+  /* Example: Center the carousel caption on larger screens */
+  @media (min-width: 992px) {
+    .carousel-caption {
+      top: 50%;
+    }
+  }
+  
+
+
+  /* Projects Section */
+.projects {
+  padding: 80px 0;
+}
+
+.projects .section-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.projects .section-header h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.projects .section-header h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #1dc8cd;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.projects .section-header p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 0;
+}
+
+.projects .portfolio-flters {
+  padding: 0;
+  margin: 30px 0 40px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.projects .portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #777;
+  margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects .portfolio-flters li:hover,
+.projects .portfolio-flters li.filter-active {
+  color: #1dc8cd;
+}
+
+.projects .portfolio-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.projects .portfolio-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.projects .portfolio-item:hover .portfolio-info {
+  bottom: 0;
+}
+
+.projects .portfolio-item .portfolio-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects .portfolio-item .img-fluid {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects .portfolio-item .portfolio-info {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  background: rgba(29, 200, 205, 0.9);
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.projects .portfolio-item .portfolio-info p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.projects .portfolio-item .portfolio-info a {
+  color: #fff;
+  font-size: 24px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.projects .portfolio-item .portfolio-info a:hover {
+  color: #1dc8cd;
+}
+
+/* Responsive Layout */
+@media (max-width: 767px) {
+  .projects .portfolio-flters li {
+    font-size: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .projects .section-header h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects .portfolio-flters li {
+    padding: 8px 16px;
+  }
+
+  .projects .portfolio-item .portfolio-info {
+    bottom: -50px;
+  }
+
+  .projects .portfolio-item:hover .portfolio-info {
+    bottom: -50px;
+  }
+}
+
+
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 200px 0; /* Adjust as needed */
+  text-align: center;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section .hero-text {
+  color: #fff; /* Text color */
+}
+
+.hero-section .hero-text span {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero-section .hero-text h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-section .primary-btn {
+  display: inline-block;
+  background-color: #ff6b6b; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-section .primary-btn:hover {
+  background-color: #ff4949; /* Button background color on hover */
+}
+
+/* Background Image */
+.hero-section.set-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Right Image */
+.hero-section .col-lg-5 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero-section {
+      padding: 150px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section .hero-text h2 {
+      font-size: 38px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section .hero-text h2 {
+      font-size: 28px;
+  }
+}
