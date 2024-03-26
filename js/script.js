@@ -1,42 +1,54 @@
-$(document).ready(function () {
-    // Initialize Isotope
-    var $portfolioContainer = $('.portfolio-container');
-    $portfolioContainer.isotope();
+// Typing Script JS
+var typed = new Typed(".typing",{
+    strings: ["Web Designer", "Web Developer", "Youtuber", "Blogger"],
+    typeSpeed: 80,
+    backSpeed: 80,
+});
 
-    // Filter items on button click
-    $('.portfolio-flters li').on('click', function () {
-      $('.portfolio-flters li').removeClass('filter-active');
-      $(this).addClass('filter-active');
+var typed = new Typed(".typing-2",{
+    strings: ["Web Developer", "Web Designer", "Youtuber", "Blogger"],
+    typeSpeed: 100,
+    backSpeed: 60,
+});
 
-      var filterValue = $(this).attr('data-filter');
-      $portfolioContainer.isotope({ filter: filterValue });
-    });
+// Show/Hide FAQs answer
+const faqs = document.querySelectorAll('.faq');
+faqs.forEach(faq => {
+    faq.addEventListener('click', () => {
+        faq.classList.toggle('open');
 
-    // Add portfolio items dynamically
-    var portfolioItems = [
-      { category: 'remodeling', title: 'Remodeling 1', imageSrc: 'img/bg1.jpg', description: 'Lorem ipsum, dolor sit amet consectetur' },
-      // Add more portfolio items as needed
-    ];
+        //change icon
+        const icon = faq.querySelector('.faq_icon i');
+        if (icon.className === 'fa-solid fa-plus'){
+            icon.className = 'fa-solid fa-minus';
+        }
+        else{
+            icon.className = 'fa-solid fa-plus';
+        }
 
-    portfolioItems.forEach(function (item) {
-      var portfolioItemHTML = `
-        <div class="col-lg-4 col-md-6 portfolio-item filter-${item.category}">
-          <div class="portfolio-content h-100">
-            <img src="${item.imageSrc}" class="img-fluid" alt="${item.title}">
-            <div class="portfolio-info">
-              <h4>${item.title}</h4>
-              <p>${item.description}</p>
-              <a href="${item.imageSrc}" title="${item.title}" data-gallery="portfolio-gallery-${item.category}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-            </div>
-          </div>
-        </div>`;
-      $portfolioContainer.append(portfolioItemHTML);
-    });
+    })
+})
 
-    // Initialize Lightbox
-    lightbox.option({
-      'resizeDuration': 200,
-      'wrapAround': true
-    });
-  });
+//Show/hide nav menu
+const menu = document.querySelector('.nav_menu');
+const menuBtn = document.querySelector('#open-menu-btn');
+const closeBtn = document.querySelector('#close-menu-btn');
+
+menuBtn.addEventListener('click', () => {
+    menu.style.display = "flex";
+    closeBtn.style.display = "inline-block";
+    menuBtn.style.display = "none";
+})
+
+//close nav menu
+const closeNav = () => {
+    menu.style.display = "none";
+    closeBtn.style.display = "none";
+    menuBtn.style.display = "inline-block";
+}
+closeBtn.addEventListener('click', closeNav);
+
+//nav color change on scroll
+window.addEventListener('scroll', () => {
+    document.querySelector('nav').classList.toggle('window-scroll', window.scrollY>100);
+})
